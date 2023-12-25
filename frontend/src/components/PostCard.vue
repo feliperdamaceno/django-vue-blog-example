@@ -9,6 +9,7 @@ defineProps<{ post: Post }>()
     <div class="p-6 space-y-2">
       <h2 class="text-xl font-medium">{{ post.title }}</h2>
       <p>{{ post.body.substring(0, 125) }}...</p>
+      <small class="italic font-medium">By {{ post.author }}</small>
     </div>
   </div>
 </template>
