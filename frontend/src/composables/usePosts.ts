@@ -5,7 +5,7 @@ export default function usePosts() {
   const posts = ref<Post[]>([])
 
   onMounted(async () => {
-    const API_URL = import.meta.env.VITE_API_URL
+    const API_URL = import.meta.env.VITE_API_URL || 'api/posts'
     const response = await fetch(API_URL)
     posts.value = await response.json()
   })
